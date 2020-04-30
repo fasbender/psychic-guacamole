@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Pacifico&family=Roboto+Mono&display=swap');
+:root{
+  --primary-font: 'Merriweather', sans-serif;
+  --secondary-font: 'Pacifico', sans-serif;
+  --tertiary-font: 'Roboto Mono', cursive;
+  --body-color: #d2d2cf;
+  --nav-color: #14213d;
+  --nav-font-color: #ffffff;
+  --main-font-color: #0b132b;
+  --header-color: #f4f1bb;
+  --nav-hover-effect: #3e92cc;
+  --body-font-color: #372549;
+}
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--body-color);
+}
+/* ------------------------------------------------------------------------- */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--nav-color);
+  color: var(--header-color);
+  font-family: var(--primary-font);
+  width: 90%;
+  margin: auto;
+  padding: 2px 5px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.logo-container img{
+  width: 50px;
+  cursor: pointer;
+}
+.nav-list{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.nav-links{
+  text-decoration: none;
+  color: var(--nav-font-color);
+}
+.logo-container{
+  flex: 1;
+}
+.cart{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.nav{
+  flex: 2;
+}
+.logo-container{
+  margin-left: 50px;
+}
+.fa-shopping-cart{
+  color: #8093f1;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.nav-links:hover{
+  color: var(--nav-hover-effect);
+  transition-duration: .5s;
+}
+.fa-shopping-cart:hover{
+  color: #386fa4;
+  transition-duration: .5s;
+}
+.fa-bars{
+  display: none;
+}
+/* end of header-css */
+.presentation{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  background-color: white;
+  align-items: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.introduction{
+  padding: 2px;
+  margin-left: 100px;
+}
+.introduction, .cover{
+  flex: 1;
+}
+.intro-text h1{
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  color: var(--body-font-color);
+}
+.intro-text p{
+  color: #ee2e31;
+  font-family: var(--primary-font);
+}
+.cta-select{
+  font-family: var(--tertiary-font);
+}
+.intro-text{
+  margin-bottom: 30px;
+}
+.cta-select{
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* end of main */
+
+/* -- responsive -- */
+@media only screen and (max-width: 700px) {
+  .nav, .cart{
+    display: none;
+  }
+  .fa-bars{
+    display: block;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  .presentation{
+    display: flex;
+    flex-direction: column;
+  }
+  .intro-text h1{
+    font-size: 2rem;
+  }
+  .cover img{
+    width: 300px;
+  }
+}
